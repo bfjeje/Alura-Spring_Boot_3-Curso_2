@@ -10,22 +10,22 @@ collection:
     meta:
       id: req_5d62257f0b5243b1935b0a86e788d51b
       created: 1742065386213
-      modified: 1742761032215
+      modified: 1744587074413
       isPrivate: false
-      sortKey: -1742065386213
+      sortKey: -1743200408807.5
     method: POST
     body:
       mimeType: application/json
       text: |
         {
-          "nombre" :  "Andres Jorge",
-        	"email" : "andres.jorge@voll.med",
-        	"documento" : "88877766",
-        	"telefono" : "11222444569",
-        	"especialidad" : "CARDIOLOGIA",
+        	"nombre" : "Marco Ponce",
+        	"email" : "marcos.ponce@voll.med",
+        	"documento" : "23765849",
+        	"telefono" : "22896574839",
+        	"especialidad" : "DERMATOLOGIA",
           "direccion" : {
-            "calle" : "calle C",
-            "barrio" : "barrio2",
+            "calle" : "calle D",
+            "barrio" : "barrio5",
             "codigo_postal" : "1234",
             "ciudad" : "San Rafael",
             "estado" : "Mendoza"
@@ -49,13 +49,18 @@ collection:
     meta:
       id: req_8495535681f642b6985581e180a8e89f
       created: 1742771175792
-      modified: 1742942554803
+      modified: 1746133652746
       isPrivate: false
-      sortKey: -1742771175792
+      sortKey: -1743200408895
     method: GET
     headers:
       - name: User-Agent
         value: insomnia/11.0.0
+        id: pair_2c8a1339d0d946d3960595f08f6c64a5
+    authentication:
+      type: bearer
+      disabled: false
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBUEkgVm9sbC5tZWQiLCJzdWIiOiJqZXNzaWNhLmZlcm5hbmRlekB2b2xsLm1lZCIsImV4cCI6MTc0NjE0MDg0MH0.qIK1q-fGS5owbRcZ4593r8vGN-avGp7xsKUK2I6D2DE
     settings:
       renderRequestBody: true
       encodeUrl: true
@@ -69,16 +74,16 @@ collection:
     meta:
       id: req_cac2b29bf7f249c7b35b26f38f5b4712
       created: 1743037020790
-      modified: 1743111901234
+      modified: 1744496549022
       isPrivate: false
-      sortKey: -1743037020790
+      sortKey: -1743200408845
     method: PUT
     body:
       mimeType: application/json
       text: |-
         {
         	"id": 3,
-        	"nombre": "Juan Carlos"
+        	"nombre": "Bruno Fernandez 2"
         }
     headers:
       - name: Content-Type
@@ -93,12 +98,12 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: http://localhost:8080/pacientes/2
-    name: Eliminar medico
+  - url: http://localhost:8080/pacientes/3
+    name: Eliminar paciente
     meta:
       id: req_0803aab9157b4997be855ab9a692a4e7
       created: 1743200408795
-      modified: 1743681033882
+      modified: 1744150651421
       isPrivate: false
       sortKey: -1743200408795
     method: DELETE
@@ -156,9 +161,9 @@ collection:
     meta:
       id: req_9b205b60fa6d4149956850d05a5586bb
       created: 1743680284259
-      modified: 1743680288074
+      modified: 1744496557248
       isPrivate: false
-      sortKey: -1742418281002.5
+      sortKey: -1743200408801.25
     method: GET
     headers:
       - name: User-Agent
@@ -176,9 +181,9 @@ collection:
     meta:
       id: req_ee76ebc3ca7b4fc1acf956d49ed1a65d
       created: 1743680856908
-      modified: 1743680993969
+      modified: 1744496559636
       isPrivate: false
-      sortKey: -1742904098291
+      sortKey: -1743200408798.125
     method: PUT
     body:
       mimeType: application/json
@@ -200,18 +205,70 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: http://localhost:8080/medicos/4
-    name: Eliminar paciente
+  - url: http://localhost:8080/medicos/5
+    name: Eliminar medico
     meta:
       id: req_44334bdc5c864aa489d4f433fa42adef
       created: 1743681024983
-      modified: 1743681024983
+      modified: 1744496552689
       isPrivate: false
-      sortKey: -1743118714792.5
+      sortKey: -1743200408820
     method: DELETE
     headers:
       - name: User-Agent
         value: insomnia/11.0.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/medicos/1
+    name: Detallar Medico
+    meta:
+      id: req_9c504ed381964c0fb0fbed2e7712bc7c
+      created: 1744497415016
+      modified: 1746134138914
+      isPrivate: false
+      sortKey: -1744497415016
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBUEkgVm9sbC5tZWQiLCJzdWIiOiJqZXNzaWNhLmZlcm5hbmRlekB2b2xsLm1lZCIsImV4cCI6MTc0NjE0MTI5Nn0.EqlcRrzVBmJvhWP75xBXAXb_Q8wB_zz61L30N-57hc8
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/login
+    name: Iniciar Sesion
+    meta:
+      id: req_66c7b3f93a8f49949a66a28a387fbc7d
+      created: 1745700714109
+      modified: 1745782332593
+      isPrivate: false
+      sortKey: -1745700714109
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"login": "jessica.fernandez@voll.med",
+        	"contrasena": "123456"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
     settings:
       renderRequestBody: true
       encodeUrl: true
@@ -225,7 +282,17 @@ cookieJar:
   meta:
     id: jar_ab0796799abe74c8831c8e18c69d671b91137997
     created: 1742065362292
-    modified: 1742065362292
+    modified: 1745107690043
+  cookies:
+    - key: JSESSIONID
+      value: C7346F8BD0FE995B0FE0D3E220CBDCEA
+      domain: localhost
+      path: /
+      httpOnly: true
+      hostOnly: true
+      creation: 2025-04-20T00:08:10.043Z
+      lastAccessed: 2025-04-20T00:08:10.043Z
+      id: 05193fa7-4e62-4a03-afe0-2b1e78e3631c
 environments:
   name: Base Environment
   meta:
